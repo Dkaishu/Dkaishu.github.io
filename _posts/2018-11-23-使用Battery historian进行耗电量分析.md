@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      使用 Battery historian 进行耗电量分析
-subtitle:   Android App 优化之电量优化
+title:      使用BatteryHistorian进行耗电量分析
+subtitle:   Android 性能优化之电量优化
 date:       2018-11-23
 author:     dks
 header-img: img/post-bg-debug.png
