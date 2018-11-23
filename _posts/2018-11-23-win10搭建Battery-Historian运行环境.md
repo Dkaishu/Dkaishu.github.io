@@ -8,8 +8,10 @@ date:       2018-11-23
 author:     dks
 header-img: img/post-bg-debug.png
 catalog: true
-tags: Android
-> Android 性能优化
+tags: 
+	- Android
+
+> Android 性能优化之电量优化
 
 # win10 搭建 Battery-Historian 运行环境
 
