@@ -1,5 +1,3 @@
-
-
 ---
 layout:     post
 title:      win10搭建 Battery-Historian 运行环境
@@ -8,9 +6,8 @@ date:       2018-11-23
 author:     dks
 header-img: img/post-bg-debug.png
 catalog: true
-tags: 
-   - Android
-
+tags:
+	- Android
 ---
 
 > Android 性能优化之电量优化
