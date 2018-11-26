@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      win10搭建 Battery-Historian 运行环境
+title:      win10搭建BatteryHistorian运行环境
 subtitle:   Android App 优化之电量优化
 date:       2018-11-23
 author:     dks
