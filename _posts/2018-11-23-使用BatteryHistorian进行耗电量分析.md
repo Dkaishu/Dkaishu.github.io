@@ -15,14 +15,16 @@ tags:
 # 使用 Battery historian 进行耗电量分析
 
 #### 使用前
-Battery historian 的安装请看前一篇[win10 搭建 Battery-Historian 运行环境](http://dkaishu.com/2018/11/23/win10%E6%90%AD%E5%BB%BABattery-Historian%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/)
+BatteryHistorian 的安装请看前一篇[win10搭建BatteryHistorian运行环境](http://dkaishu.com/2018/11/26/2018-11-23-win10%E6%90%AD%E5%BB%BABatteryHistorian%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/)
 感谢 [Battery historian tool 使用说明](https://wwmmyy.github.io/2016/12/14/Battery_Historian_Tool%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/)，配图很详细。
 #### 使用
 1. 管理员权限运行CMD
 
   ```
   cd C:\Users\Administrator\go\src\github.com\google\battery-historian
-  battery-historian.go
+
+  go run cmd/battery-historian/battery-historian.go
+
   //或直接  go run cmd/battery-historian/battery-historian.go	 
   ```
 
