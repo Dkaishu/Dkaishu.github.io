@@ -11,7 +11,7 @@ github_repo: "https://github.com/Dkaishu/Dkaishu.github.io.git" # you code repos
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
+sidebar-about-description: "Learn And Write"
 sidebar-avatar: #/img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -73,12 +73,12 @@ gitalk:
 # 统计
 
 # Analytics settings
-# Baidu Analytics
-#ba_track_id: b50bf2b12b5338a1845e33832976fd68
+ Baidu Analytics
+ba_track_id: 7b19c3ad13c260f91ce2d6411986c3e5
 
 # Google Analytics
-#ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-#ga_domain: qiubaiying.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+ga_track_id: 'UA-130059806-1'            # Format: UA-xxxxxx-xx
+ga_domain: dkaishu.com             # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
 
