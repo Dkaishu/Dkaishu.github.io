@@ -73,11 +73,11 @@ gitalk:
 # 统计
 
 # Analytics settings
- Baidu Analytics
+Baidu Analytics
 ba_track_id: 7b19c3ad13c260f91ce2d6411986c3e5
 
 # Google Analytics
-ga_track_id: 'UA-130059806-1'            # Format: UA-xxxxxx-xx
+ga_track_id: UA-130059806-1            # Format: UA-xxxxxx-xx
 ga_domain: dkaishu.com             # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
