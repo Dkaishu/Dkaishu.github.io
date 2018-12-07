@@ -25,3 +25,8 @@ tags:
 方法一：将``` gradle-wrapper.properties```` 改为已经存在的版本。注意，大版本之间差异较大，很可能功能不支持报错。
 
 方法二：畅通的网络环境，翻墙，并对AndroidStudio进行代理设置。
+
+## 相关
+
+- [Android Gradle plugin release notes](https://developer.android.com/studio/releases/gradle-plugin)
+- [Android Studio release notes](https://developer.android.com/studio/releases/)

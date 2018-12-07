@@ -20,7 +20,7 @@ tags:
 
 #### 选择环境安装方式
 
-Battery-historian 运行需要 go环境、Python2环境（注意：目前不支持Python3）、Java环境、git环境。所以搭建环境有两种方式选择：
+Battery-historian 运行需要 Go环境、Python2环境（注意：目前[2018-11]不支持Python3）、Java环境、Git环境。所以搭建环境有两种方式选择：
 
 1. 官方推荐的Docker环境，如果之前没用用过，推荐第二种，因为Docker环境的搭建及下载，要比第二种麻烦许多，特别是在国内网络环境下。[官网地址](https://github.com/google/battery-historian)
 
