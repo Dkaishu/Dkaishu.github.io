@@ -41,8 +41,37 @@ Android Studio 1.0以后采用 Gradle 打包，我认为主要原因就是简单
 #### 构建的生命周期
 不包含依赖的 Tasks 总是优先执行，一旦一个tasks被执行，那么它不会再次执行了，一次构建将会经历下列三个阶段：
 1. 初始化阶段：创建 project，如果有多个模块，即有多个build.gradle文件，多个project将会被创建。
+
 2. 配置阶段：在该阶段，build.gradle 脚本将会执行，为每个 project 创建和配置所有的 tasks 。
+
 3. 执行阶段：Gradle 会决定哪一个 tasks 会被执行，这完全依赖开始构建时传入的参数并且和当前所在的文件夹位置有关。
+
+
+## 区分Gradle和Android Gradle Plugin
+Gradle 是用来构建项目的，但并不是说只能用于构建 Android 的项目。
+
+那如果我只是做 Android 开发，我也就只需要 Gradle 构建 Android 项目的功能即可，其他的又不需要，鉴于此，Gradle 封装好了基本的构建工作，然后提供了插件的接口，支持根据各自需要去扩展相应的构建任务。显然 Android Gradle 插件的开发并非是由 Gradle 官方开发的，module 下的 build.gradle 中：
+```
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+```
+表示你当前所用到的插件
+
+根目录下的 build.gradle ：
+```
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+
+    }
+}
+```
+表示你整个 project 共用的插件，这里的 3.2.1 就是当前所用的Gradle 插件的版本号，插件版本必须与Gradle 的版本相对应，以保持兼容。具体的对照表可查看[Android Gradle plugin release notes](https://developer.android.com/studio/releases/gradle-plugin#updating-gradle)。要修改 Gradle 插件版本，直接修改上面的版本号（3.2.1）即可；要修改 Gradle 的版本，直接修改根目录 `gradle/wrapper` 文件夹 `gradle-wrapper.properties`中的版本号即可。具体可参看下文 Gradle Wrapper 相关内容。当我们导入一个原有项目时，两者很有可能和你常用的版本不一致，当版本相差不大时，直接修改版本号是一个捷径。当版本差异较大时，不建议修改版本，而是要下载相应的版本，以为 Gradle 和 Gradle插件 大版本之间的差异很大，而且不兼容，会直接导致报错，项目无法运行。
 
 ## 配置文件
 基于 Grade 构建的项目至少有一个 build.gradle ，Android中目录结构通常是这样的：
@@ -99,7 +128,7 @@ zipStoreBase=GRADLE_USER_HOME
 zipStorePath=wrapper/dists
 distributionUrl=https\://services.gradle.org/distributions/gradle-4.6-all.zip
 ```
-以上是 gradle-wrapper.properties 的内容，通常除了最后一项，我们无需改动。distributionUrl 指的是我们所需下载的文件的连接，并可以直观看出其版本。当我们下载太慢时，可手动去下载。可参考： [AndroidStudio导入项目时一直卡在 Building gradle project info 的问题](http://dkaishu.com/2018/11/27/AndroidStudio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE%E6%97%B6%E4%B8%80%E7%9B%B4%E5%8D%A1%E5%9C%A8-Building-gradle-project-info-%E7%9A%84%E9%97%AE%E9%A2%98/)
+以上是 gradle-wrapper.properties 的内容，通常除了最后一项，我们无需改动。distributionUrl 指的是我们所需下载的文件的连接，并可以直观看出其版本。要修改 Gradle 的版本，直接修改这里的版本号即可。当我们下载太慢时，可手动去下载。可参考： [AndroidStudio导入项目时一直卡在 Building gradle project info 的问题](http://dkaishu.com/2018/11/27/AndroidStudio%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE%E6%97%B6%E4%B8%80%E7%9B%B4%E5%8D%A1%E5%9C%A8-Building-gradle-project-info-%E7%9A%84%E9%97%AE%E9%A2%98/)
 
 #### gradle.properties
 此文件用于对 gradle project 的属性配置，建议的配置：
