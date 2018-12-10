@@ -4,7 +4,7 @@ title:      Gradle在Android中的应用（一）
 subtitle:   认识Gradle
 date:       2018-11-15
 author:     dks
-header-img: img/post-bg-ios9-web.jpg
+header-img: img/post-bg-e2e-ux.jpg
 catalog: true
 tags:
    - Android
