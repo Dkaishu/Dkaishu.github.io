@@ -2,7 +2,7 @@
 layout:     post
 title:      Gradle在Android中的应用（一）
 subtitle:   认识Gradle
-date:       2018-11-15
+date:       2018-12-06
 author:     dks
 header-img: img/post-bg-e2e-ux.jpg
 catalog: true
