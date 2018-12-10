@@ -1,11 +1,10 @@
-
 ---
 layout:     post
 title:      Gradle在Android中的应用（参考文档）
 subtitle:   【Gradle在Android中的应用】几篇文章的参考文档
-date:       2018-11-15
+date:       2018-12-10
 author:     dks
-header-img: img/post-bg-ios9-web.jpg
+header-img: img/post-bg-e2e-ux.jpg
 catalog: true
 tags:
    - Android
@@ -13,7 +12,7 @@ tags:
 
 >感谢作者
 
- 
+
 # Gradle在Android中的应用（参考文档）
 
 - [读书笔记--Android Gradle权威指南（上）]（https://www.imooc.com/article/30818）
