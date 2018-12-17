@@ -59,7 +59,8 @@ Gradle 使用了一个叫做 source set 的概念，官方解释：一个 source
 - gradlew：`Gradle start up script for UNIX` Unix系列系统启动 Gradle 的脚本
 - gradlew.bat：` Gradle startup script for Windows` window系统启动 Gradle 的脚本
 - .gradle文件夹：运行项目时自动生成
-**这三个都不需要我们去改动**，无视他们就好
+
+这三个都不需要我们去改动**，无视他们就好
 
 #### 根目录gradle文件夹
 首先我们需要明白 Gradle Wrapper 的概念：Grade 只是一个构建工具，而新版本总是在更迭，所以 Gradle Wrapper 应运而生，如同它的名字，它是对 Gradle 的包装。并且 Gradle Wrapper 提供了一个windows 的 batch 文件和其他系统的 shell 文件，即上文提到的```gradlew```和```gradlew.bat```，当我们去build 项目时，会运行这个脚本，这个时候，才去真正下载相应的Gradle版本。开发者不需要为你的电脑安装任何 gradle 版本，避免由于gradle版本更新导致的问题。

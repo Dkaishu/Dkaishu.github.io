@@ -16,13 +16,13 @@ tags:
 # Gradle在Android中的应用（一）
 
 ## 什么是Gradle
-```
-Gradle是一个基于Apache Ant和Apache Maven概念的项目自动化建构工具。它使用一种基于Groovy的特定领域语言来声明项目设置，而不是传统的XML。
 
-当前其支持的语言限于Java、Groovy和Scala，计划未来将支持更多的语言。
+>Gradle是一个基于Apache Ant和Apache Maven概念的项目自动化建构工具。它使用一种基于Groovy的特定领域语言来声明项目设置，而不是传统的XML。
 
-过去 Java 开发者常用 Maven 和 Ant 等工具进行封装布署的自动化，或是两者兼用，不过这两个包彼此有优缺点，如果频繁改变相依包版本，使用 Ant 相当麻烦，如果琐碎工作很多，Maven 功能不足，而且两者都使用 XML 描述，相当不利于设计 if、switch 等判断式，即使写了可读性也不佳，而 Gradle 改良了过去 Maven、Ant 带给开发者的问题，至今也成为 Android Studio 内置的封装布署工具。
-```
+>当前其支持的语言限于Java、Groovy和Scala，计划未来将支持更多的语言。
+
+>过去 Java 开发者常用 Maven 和 Ant 等工具进行封装布署的自动化，或是两者兼用，不过这两个包彼此有优缺点，如果频繁改变相依包版本，使用 Ant 相当麻烦，如果琐碎工作很多，Maven 功能不足，而且两者都使用 XML 描述，相当不利于设计 if、switch 等判断式，即使写了可读性也不佳，而 Gradle 改良了过去 Maven、Ant 带给开发者的问题，至今也成为 Android Studio 内置的封装布署工具。
+
 以上是来自维基百科 [Gradle](https://zh.wikipedia.org/wiki/Gradle) 的解释。通俗的说，**Gradle 就是用来打包的一个工具，它包含了一系列的脚本，并可以自定义配置，较 Ant 和 Maven 有诸多优点**。而 Groovy 对于 Gradle，就好比 Java 对于 Android。
 
 
@@ -73,4 +73,4 @@ buildscript {
 ```
 表示你整个 project 共用的插件，这里的 3.2.1 就是当前所用的Gradle 插件的版本号，插件版本必须与Gradle 的版本相对应，以保持兼容。具体的对照表可查看[Android Gradle plugin release notes](https://developer.android.com/studio/releases/gradle-plugin#updating-gradle)。要修改 Gradle 插件版本，直接修改上面的版本号（3.2.1）即可；要修改 Gradle 的版本，直接修改根目录 `gradle/wrapper` 文件夹 `gradle-wrapper.properties`中的版本号即可。具体可参看下文 Gradle Wrapper 相关内容。当我们导入一个原有项目时，两者很有可能和你常用的版本不一致，当版本相差不大时，直接修改版本号是一个捷径。当版本差异较大时，不建议修改版本，而是要下载相应的版本，以为 Gradle 和 Gradle插件 大版本之间的差异很大，而且不兼容，会直接导致报错，项目无法运行。
 
-##### 接[下一篇](http://dkaishu.com/2018/12/10/Gradle%E5%9C%A8Android%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8-%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/)
+##### 接[下一篇](http://dkaishu.com/2018/12/07/Gradle%E5%9C%A8Android%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8-%E4%BA%8C/)
