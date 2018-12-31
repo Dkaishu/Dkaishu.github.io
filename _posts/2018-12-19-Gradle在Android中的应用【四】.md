@@ -224,9 +224,9 @@ producAImplementation rootProject.ext.suptDeps.suptConstraintLayout
 //二者组合：
 producAReleaseImplementation rootProject.ext.suptDeps.suptConstraintLayout
 ```
-####  多渠道打包
-- productFlavors用于生成不同渠道的包，开发和编译时注意在AS左下角选择对应的Build variant
 
+####  多渠道打包
+- productFlavors用于生成不同渠道的包，开发和编译时注意在AS左下角 Build variant 标签展开进行选择
 - 可使用AS进行打包，Generate Sigined APK --> 输入签名文件及密码 --> 选择 Build Type 和 Flavor --> finsh
 - 也可在 terminal 中进行：
 ```
@@ -281,7 +281,7 @@ producAReleaseImplementation rootProject.ext.suptDeps.suptConstraintLayout
     }
 ```
 
-packagingOptions
+## packagingOptions
 引用的三方库会带有一些配置文件如 xxxx.properties,或者license信息，打包的时候去掉这些信息
 ```
     packagingOptions {
@@ -296,7 +296,8 @@ packagingOptions
         exclude 'META-INF/LGPL2.1'
     }
 ```
-## 针对.so文件,选择 ndk
+## 针对.so文件,配置ndk
+用c或者c++写的library会被叫做so包，Android插件默认情况下支持native包，.so文件放在app包下的jniLibs包对应的文件夹中。armeabi；armeabi-v7a；mips；x86；这样不同架构的CPU会使用对应的so包，以提高性能。
 ```
    Android系统支持以七种不同的CPU架构，通常来说只需要考虑以下三种
    armeabi，armeabi-v7a，x86
