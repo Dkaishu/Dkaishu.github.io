@@ -7,7 +7,7 @@ author:     dks
 header-img: img/post-bg-swift2.jpg
 catalog: true
 tags:
-   - MySQL
+   - Android
 ---
 
 
