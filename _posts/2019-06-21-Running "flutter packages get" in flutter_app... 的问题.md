@@ -1,15 +1,13 @@
-
 ---
 layout:     post
 title:     Running "flutter packages get" in flutter_app... 的问题
-subtitle:   初识Flutter
+subtitle:    初识Flutter
 date:       2019-06-21
-author:     dks
+author:    dks
 header-img: img/post-bg-universe.jpg
 catalog: true
 tags:
    - Flutter
-
 ---
 
 
