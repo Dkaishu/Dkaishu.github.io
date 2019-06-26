@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:     Android Studio中Flutter代码提示卡顿卡死问题
+title:     Android Studio 中 Flutter 代码提示卡顿假死问题
 subtitle:    初识Flutter
 date:       2019-06-21
 author:    dks
@@ -19,7 +19,7 @@ Flutter 文档提示采用 MarkDown 解析，在 Flutter 的源码文档注释�
 ## 解决方法
 - **方法一**： 当图片下载完以后，下次再提示时，因为有缓存所以不再卡顿。因此你可以耐心等待第一次加载，不用其他操作。
 - **方法二**： AndroidStudio => Settings(Mac:Preferences) => Editor => General => Code Completion ，将`show the documentation pop in 1000ms`取消勾选，也就是将文档提示关闭。 
-- **方法三**：改动Flutter源文件，将文档中的图片去除。**不建议**，因为通过Git升级Flutter时会冲突。
+- **方法三**：改动 Flutter 源文件，将文档中的图片去除。**不建议**，因为通过 Git 升级 Flutter 时会冲突。
 
 ## 参考
 - [AndroidStudio 3.3 Flutter使用Colors卡顿](https://blog.csdn.net/hxl517116279/article/details/89167219)
